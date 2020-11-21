@@ -1,0 +1,149 @@
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #343a40;
+}
+
+p {
+    color: #343a40;
+}
+
+.Form {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    max-width: 400px;
+    border-radius: 10px;
+    max-height: 90vh;
+    border: 1px solid #42b983;
+    padding: 30px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+.Form-Header {
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 5px 0px;
+}
+
+.Form-Content {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+}
+
+
+/*AQUI inicia EL textfield */
+
+.textfield {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.textfield input {
+    font-family: 'ubuntu', sans-serif;
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+    font-weight: 100;
+    background: none;
+    color: black;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+}
+
+.textfield .lbl-text {
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.textfield .lbl-text:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #42b983;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+
+.s-text {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transition: all 0.3s ease;
+    color: gray;
+}
+
+.textfield input:focus+.lbl-text .s-text,
+.textfield input:valid+.lbl-text .s-text {
+    transform: translateY(-120%);
+    font-size: 14px;
+    color: #42b983;
+}
+
+.textfield input:focus+.lbl-text:after,
+.textfield input:valid+.lbl-text:after {
+    transform: translateX(0%);
+}
+
+
+/*
+Danger version
+*/
+
+.textfield .lbl-text-error {
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.textfield .lbl-text-error:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid red;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+
+.s-text-error {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transition: all 0.3s ease;
+    color: gray;
+}
+
+.textfield input:focus+.lbl-text-error .s-text-error,
+.textfield input:valid+.lbl-text-error .s-text-error {
+    transform: translateY(-120%);
+    font-size: 14px;
+    color: red;
+}
+
+.textfield input:focus+.lbl-text-error:after,
+.textfield input:valid+.lbl-text-error:after {
+    transform: translateX(0%);
+}

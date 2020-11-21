@@ -1,0 +1,209 @@
+.container-r {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    margin: 0 100px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-r .card_r {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background: #343a40;
+    /*#42b983*/
+    /*4897D8 006c84*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.container-r .card_r::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+}
+
+.container-r .card_r .c_content {
+    padding: 10px;
+    text-align: center;
+}
+
+.container-r .card_r .c_content h2 {
+    position: absolute;
+    right: 30px;
+    top: 0;
+    font-size: 4em;
+    font-weight: 800;
+    color: #42b983;
+    z-index: 1;
+    opacity: 0.1;
+    transition: 0.5s;
+}
+
+.container-r .card_r:hover .c_content h2 {
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.container-r .card_r .c_content h3 {
+    position: relative;
+    font-size: 1.5em;
+    color: #42b983;
+    z-index: 2;
+    opacity: 0.5;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.container-r .card_r .c_content p {
+    position: relative;
+    font-size: 1em;
+    color: #fff;
+    z-index: 2;
+    font-weight: 300;
+    opacity: 0.5;
+    transition: 0.5s;
+    text-align: justify;
+    margin: 0 20px;
+}
+
+.container-r .card_r:hover .c_content p {
+    opacity: 1;
+    color: #fff;
+    transform: translateY(10px);
+}
+
+.container-r .card_r:hover .c_content h3 {
+    opacity: 1;
+    color: #42b983;
+    transform: translateY(10px);
+}
+
+.container-r .card_r .c_content img {
+    width: 300px;
+    height: 200px;
+    opacity: 0.5;
+    transform: translateY(70px);
+    transition: 0.7s;
+}
+
+.container-r .card_r:hover .c_content img {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container-r .card_r .c_content button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    color: black;
+    background: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 15px;
+    outline: none;
+}
+
+.container-r .card_r .c_content button:hover {
+    background: #42b983;
+    color: #fff;
+}
+
+.container-r .card_r span {
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.container-r .card_r:hover span {
+    opacity: 1;
+}
+
+.container-r .card_r span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, transparent, #42b983);
+    animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.container-r .card_r span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #42b983);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.container-r .card_r span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to left, transparent, #42b983);
+    animation: animate3 2s linear infinite;
+}
+
+@keyframes animate3 {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.container-r .card_r span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #42b983);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate4 {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
